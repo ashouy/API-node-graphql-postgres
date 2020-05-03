@@ -4,19 +4,21 @@ const db = require('../db/db')
 
 
 productRoute.get('/', async (req, res) => {
-    db.query('query to get all', params, callback)
+    res.send({message: "query to get all"})
 
 })
-
 productRoute.patch('/:id', async (req,res) =>{
+    res.send({message: "query to get all"})
 
 })
 
 productRoute.get('/:id', async (req, res) => {
+    res.send({message: "query to get all"})
 
 })
 
 productRoute.post('/', async (req, res) => {
+    res.send({message: "query to get all"})
 
 })
 

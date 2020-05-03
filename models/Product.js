@@ -1,27 +1,14 @@
-var mongoose = require('mongoose')
+const db = require('../db/db')
 
-const productSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        require: true
-    },
-    price: {
-        type: Number,
-        require: true
-    },
-    description: {
-        type: String,
-        require: true
-    },
-    amount:{
-        type: Number,
-        require: true
-    },
-    addDate:{
-        type: Date,
-        default: Date.now()
+class Product {
+    constructor(params) {
+        this.id = params.id
+        this.name = params.name
+        this.price = params.price
+        this.description = params.description
+        this.addedDate = params.addeddate
     }
-})
 
+}
 
-module.exports = mongoose.model('Product',productSchema)
+module.exports = Product
